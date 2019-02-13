@@ -36,7 +36,6 @@ jobs:
       # run tests!
       - run: npm test
 
-    develop:
       branch: /^(?!master$).*$/
       commands:
         - eb use env-dev --profile default
