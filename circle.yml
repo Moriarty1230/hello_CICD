@@ -35,6 +35,7 @@ jobs:
 
       # run tests!
       - run:
-        commands:|
-        eb use env-dev --profile default
-        eb deploy --profile default
+          name: test
+          commands:|
+            eb use env-dev --profile default
+            eb deploy --profile default
