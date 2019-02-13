@@ -34,4 +34,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: npm test
+      - run:
+        commands:|
+        eb use env-dev --profile default
+        eb deploy --profile default
