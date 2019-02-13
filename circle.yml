@@ -35,8 +35,8 @@ jobs:
 
       # run tests!
       - run: npm test
-
-      branch: /^(?!master$).*$/
-      commands:
-        - eb use env-dev --profile default
-        - eb deploy --profile default
+      - run:
+          name: deploy
+          command: |
+            eb use env-dev --profile default
+            eb deploy --profile default
