@@ -1,5 +1,6 @@
-machine:
-  node:
-    version: 11.9.0
-  test:
-    - npm test
+version: 2
+jobs:
+  build:
+    - run:
+        name: Run Tests
+        command: npm test
